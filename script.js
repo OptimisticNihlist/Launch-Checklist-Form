@@ -42,7 +42,7 @@ window.addEventListener("load",function(){
       console.log(fetch('https://handlers.education.launchcode.org/static/planets.json').then(function(response){
          return response.json();
       }))
-      let missionPlanet = Math.ceil(5,Math.floor(0,(Math.random()*10)));
+      let missionPlanet = Math.round(Math.random()*5);
       fetch('https://handlers.education.launchcode.org/static/planets.json').then(function(response){
          return response.json().then(function(json){
             document.getElementById("missionTarget").innerHTML = 
